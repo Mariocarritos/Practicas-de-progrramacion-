@@ -1,71 +1,72 @@
-# Semana 1 – Tipos de datos en Python
+# Semana 2 – Condicionales y decisiones en Python
 
-Bienvenido Aaron 👋  
-En esta primera semana aprenderás a trabajar con **tipos de datos básicos en Python**:  
-- **Números** (enteros y decimales)  
-- **Cadenas de texto** (strings)  
-- **Valores lógicos** (booleanos: `True` o `False`)  
+Hola de nuevo, Aaron 👋  
+Esta semana vas a aprender a darle **inteligencia a tus programas**: que tomen decisiones según lo que pase.  
+Para eso usaremos **condicionales**, que se escriben con la palabra clave `if`.
 
-Vas a resolver **2 ejercicios** que te ayudarán a practicar y entender cómo usar estos datos en programas simples.
+También vas a aprender a **pedir datos al usuario** usando `input()`.  
+Así tus programas podrán interactuar contigo o con otras personas.
 
-- Deberás crear 2 archivos `.py`, `exercise-1.py` y `exercise-2.py`, y en cada uno escribir tu código python con la solución a cada ejercicio.
+---
 
-## 📝 Ejercicio 1: Conociendo a las variables
+## 🧠 Conceptos clave
 
-En programación, una **variable** es como una caja en la que guardamos un dato con un nombre.  
-Ese dato puede ser un número, un texto o un valor lógico.
-
-👉 **Tu misión:**  
-1. Crea una variable que guarde tu **nombre**.
-2. Crea una variable que guarde tu **edad**.
-3. Crea una variable que guarde tu **videojuego favorito**.
-4. Haz que Python muestre en pantalla una frase usando esas variables.
-
-💡 **Pista**: Para mostrar texto en Python se usa la función `print()`.    
+- `input()` sirve para pedirle algo al usuario.
 ```python
-print("Hola, soy Aaron")
+nombre = input("¿Cómo te llamas? ")
 ```
-Cuando uses variables, puedes combinarlas con texto usando f-strings , antepondiendo la letra 'f' antes del string:
-
+- if sirve para tomar decisiones:
 ```python
-print(f"Mi nombre es {nombre}")
+if edad >= 18:
+    print("Eres mayor de edad.")
+else:
+    print("Eres menor de edad.")
 ```
 
-🎯 Objetivo del ejercicio:
+💡 Importante: en Python se usan tabulaciones (sangrías) para indicar qué instrucciones pertenecen a cada bloque.
 
-- Practicar cómo crear variables.
-- Diferenciar entre texto (strings) y números (int).
-- Aprender a mostrar información en pantalla con print().
-
-📝 Ejercicio 2: Tu primer mini-calculadora
-Ahora que sabes usar variables, vas a crear un programa que funcione como una mini calculadora.
-
+## 📝 Ejercicio 1: ¿Eres mayor de edad?
 👉 Tu misión:
 
-- Crea dos variables que guarden números (puedes elegirlos tú).
-- Haz que Python muestre la suma de esos dos números.
-- Haz que muestre también la resta, la multiplicación y la división.
-- Agrega un mensaje explicativo para cada operación, por ejemplo:
-  - `"La suma es: ..."`
-  - `"La resta es: ..."`
+Pide al usuario su nombre.
+Pide su edad (recuerda que input() siempre devuelve texto, así que deberás convertirlo a número con int()).
+Si la edad es mayor o igual a 18, muestra un mensaje como:
+
+```css
+Hola [nombre], eres mayor de edad.
+```
+Si no, muestra:
+
+```css
+Hola [nombre], aún eres menor de edad.
+```
+### 🎯 Objetivo del ejercicio:
+
+Usar input() para leer datos.
+Aprender a convertir texto a número (int()).
+Usar if y else para tomar decisiones.
+
+## 📝 Ejercicio 2: Tu primer selector de juegos
+👉 Tu misión:
+Vas a crear un pequeño programa que recomiende un videojuego según lo que el usuario elija.
+Pide al usuario que escriba qué tipo de juego le gusta:
+- “peleas”
+- “aventura”
+- “estrategia”
+
+Usa condicionales (if, elif, else) para mostrar una recomendación según su elección.
+
+Por ejemplo:
+- Si elige “peleas”, muestra: Te recomiendo Street Fighter o Mortal Kombat!
+- Si elige “aventura”, muestra: Podrías probar Zelda o Hollow Knight!
+- Si elige “estrategia”, muestra: Age of Empires siempre es una buena idea!
+- Si escribe otra cosa, muestra: No conozco ese tipo de juegos, ¡pero suena interesante!
 
 💡 Pista:
-En Python puedes usar:
+Recuerda que elif significa “si no se cumplió lo anterior, prueba esta otra condición”.
 
-- `+` para sumar
-- `-` para restar
-- `*` para multiplicar
-- `/` para dividir
+### 🎯 Objetivo del ejercicio:
 
-Ejemplo básico:
-
-```python
-resultado = 5 + 3
-print("El resultado es", resultado)
-```
-
-🎯 Objetivo del ejercicio:
-
-- Practicar cómo usar números en Python.
-- Aprender operaciones básicas.
-- Empezar a pensar cómo los programas pueden hacer cálculos automáticamente.
+Comprender cómo funcionan las decisiones múltiples (if, elif, else).
+Aprender a combinar texto ingresado por el usuario con lógica condicional.
+Entender cómo se comporta un programa interactivo.
