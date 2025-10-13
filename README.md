@@ -1,72 +1,91 @@
-# Semana 2 – Condicionales y decisiones en Python
+# Semana 3 – Bucles en Python (Repeticiones y automatización)
 
-Hola de nuevo, Aaron 👋  
-Esta semana vas a aprender a darle **inteligencia a tus programas**: que tomen decisiones según lo que pase.  
-Para eso usaremos **condicionales**, que se escriben con la palabra clave `if`.
+Hola Aaron 👋
+En esta oportunidad aprenderás a usar los bucles, una de las herramientas más poderosas en programación.
+Los bucles permiten que el código repita una acción muchas veces sin escribirla manualmente.
 
-También vas a aprender a **pedir datos al usuario** usando `input()`.  
-Así tus programas podrán interactuar contigo o con otras personas.
+En Python hay dos tipos principales de bucles:
 
----
+* for → cuando sabes cuántas veces quieres repetir algo.
+
+* while → cuando quieres repetir algo hasta que se cumpla una condición.
 
 ## 🧠 Conceptos clave
+### Bucle for
 
-- `input()` sirve para pedirle algo al usuario.
+Sirve para recorrer una secuencia (como una lista o un rango de números):
+
 ```python
-nombre = input("¿Cómo te llamas? ")
-```
-- if sirve para tomar decisiones:
-```python
-if edad >= 18:
-    print("Eres mayor de edad.")
-else:
-    print("Eres menor de edad.")
+for i in range(5):
+  print("Repetición número", i)
 ```
 
-💡 Importante: en Python se usan tabulaciones (sangrías) para indicar qué instrucciones pertenecen a cada bloque.
+Esto imprime del 0 al 4.
+range(5) crea una secuencia de 5 números.
 
-## 📝 Ejercicio 1: ¿Eres mayor de edad?
+### Bucle while
+
+Repite algo mientras una condición sea verdadera:
+
+```python
+contador = 0
+while contador < 5:
+  print("Contador:", contador)
+  contador += 1
+```
+
+El bucle se detiene cuando contador deja de ser menor que 5.
+
+## 📝 Ejercicio 1: Contador divertido
+
 👉 Tu misión:
 
-Pide al usuario su nombre.
-Pide su edad (recuerda que input() siempre devuelve texto, así que deberás convertirlo a número con int()).
-Si la edad es mayor o igual a 18, muestra un mensaje como:
+- Pide al usuario un número con input().
+- Usa un bucle for para contar desde 1 hasta ese número, mostrando cada número en pantalla.
+- Al final del conteo, muestra un mensaje como:
+´´´css
+¡Listo! Conté hasta [número].
+´´´
 
-```css
-Hola [nombre], eres mayor de edad.
+### 💡 Pistas:
+
+- Recuerda que range(1, numero + 1) cuenta desde 1 hasta el número ingresado.
+- No olvides convertir el valor ingresado con int().
+
+## 🎯 Objetivo del ejercicio:
+
+- Entender cómo funciona for y el objeto range().
+- Practicar la conversión de texto a número.
+- Empezar a combinar entrada de usuario con repeticiones.
+
+## 📝 Ejercicio 2: Adivina el número secreto
+
+### 👉 Tu misión:
+
+Crea un pequeño juego donde el programa elija un número secreto (por ejemplo, 7) y el jugador deba adivinarlo.
+
+- Define una variable secreto = 7.
+- Pide al usuario que adivine el número.
+- Usa un bucle while que siga pidiendo intentos hasta que el jugador acierte.
+- Si el número ingresado es menor al secreto, muestra "Demasiado bajo".
+- Si es mayor, muestra "Demasiado alto".
+- Cuando el jugador acierte, muestra "¡Adivinaste el número secreto!".
+
+### 💡 Pistas:
+
+- Usa int() para convertir la respuesta a número.
+- Dentro del bucle, puedes actualizar la variable con un nuevo input() cada vez.
+
+## 🎯 Objetivo del ejercicio:
+
+- Comprender cómo funcionan los bucles while.
+- Controlar cuándo detener un bucle.
+- Aplicar condiciones (if) dentro de un bucle.
+
+# 💬 Extra (opcional):
+Haz que el número secreto sea aleatorio usando el módulo random:
+
+```python
+import random
+secreto = random.randint(1, 10)
 ```
-Si no, muestra:
-
-```css
-Hola [nombre], aún eres menor de edad.
-```
-### 🎯 Objetivo del ejercicio:
-
-Usar input() para leer datos.
-Aprender a convertir texto a número (int()).
-Usar if y else para tomar decisiones.
-
-## 📝 Ejercicio 2: Tu primer selector de juegos
-👉 Tu misión:
-Vas a crear un pequeño programa que recomiende un videojuego según lo que el usuario elija.
-Pide al usuario que escriba qué tipo de juego le gusta:
-- “peleas”
-- “aventura”
-- “estrategia”
-
-Usa condicionales (if, elif, else) para mostrar una recomendación según su elección.
-
-Por ejemplo:
-- Si elige “peleas”, muestra: Te recomiendo Street Fighter o Mortal Kombat!
-- Si elige “aventura”, muestra: Podrías probar Zelda o Hollow Knight!
-- Si elige “estrategia”, muestra: Age of Empires siempre es una buena idea!
-- Si escribe otra cosa, muestra: No conozco ese tipo de juegos, ¡pero suena interesante!
-
-💡 Pista:
-Recuerda que elif significa “si no se cumplió lo anterior, prueba esta otra condición”.
-
-### 🎯 Objetivo del ejercicio:
-
-Comprender cómo funcionan las decisiones múltiples (if, elif, else).
-Aprender a combinar texto ingresado por el usuario con lógica condicional.
-Entender cómo se comporta un programa interactivo.
