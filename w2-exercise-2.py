@@ -1,6 +1,7 @@
 print("Quieres conocer juegos de tu genero favorito?")
 print("Escribe tu genero de videojuegos favorito y te recomendare varios del mismo genero")
 genero = input("Escoge entre: Aventura, RPG, Estrategia o Peleas: ")
+
 #Recuerda la mayusculas
 
 if genero == "Aventura":

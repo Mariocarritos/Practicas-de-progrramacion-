@@ -4,6 +4,7 @@ print("Vamos a jugar a adivinar un numero del 1 al 10!")
 intento = int(input("Escoge un numero del 1 al 10: "))
 
 #Forma 1
+
 while secreto != intento:
     if intento < secreto:
         print("Ups! El numero es demaciado bajo :(")
@@ -20,6 +21,7 @@ print("Vamos a subir la dificultad, ahora es un numero del 1 al 20!")
 intento2 = int(input("Escoge un numero del 1 al 20: "))
 
 #Forma 2
+
 while intento2 < juego2 or intento > juego2:
     if intento2 < juego2:
         print("Ups! El numero es demaciado bajo :(")
